@@ -20,16 +20,16 @@
   })
 
   var TitleFact = React.createFactory(MyTitle) // create a Factory and pass in the class name.
+  var ce = React.createElement // here's another way.
 
-  // Create a new component, and this new component should produce some HTML.
-  // below: use () for multi-line expression
   var MyFirstComponent = (
     div(null,  //this null is used to add attributes
       TitleFact({title: 'Props are great!', color: 'red'}), // this is the factory created above.
       // React instantiates class with React.createElement(MyTitle, null)
   		// this is an instance:
       // creating a bunch of instances is not very D.R.Y., so create a Factory (see above).
-  		React.createElement(MyTitle, {title: 'My first title'})
+  		React.createElement(MyTitle, {title: 'My first title'}),
+      ce(MyTitle, {title: "I hate angular!", color: 'blue'}) // this is from variable ce above.
     )
   )
 
