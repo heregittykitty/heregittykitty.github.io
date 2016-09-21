@@ -2,7 +2,7 @@
   var React = require('react')
   var ReactDOM = require('react-dom')
   var div = React.DOM.div
-  var h1 = React.DOM.h1
+  // var h1 = React.DOM.h1
 
   // What if I want my own functional component? React allows me to create my own through .createClass
   // createClass needs render method, and all it does is return whatever.
